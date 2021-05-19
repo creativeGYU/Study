@@ -1,0 +1,17 @@
+public class GuGuDanTest {
+  	public static void main(String[] args) {
+        System.out.println("4. 반복문을 활용하여 짝수 구구단만 출력");
+			      int u = 2;
+			      for ( u = 1 ; u <= 4; u++) {
+				        System.out.print(u * 2 + "단\t");
+			      } System.out.println();
+			      int v;
+			      int w;
+			      for (w = 1; w <= 9; w++) {
+				        for (v = 1; v <= 4; v++) {	
+					          System.out.print(v*2 + "*" + w + "=" + v*2*w + "\t");
+				        }
+				    System.out.println();
+			      }
+    }
+}
