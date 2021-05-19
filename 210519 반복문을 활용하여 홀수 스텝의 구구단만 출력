@@ -1,0 +1,18 @@
+public class GuGuDanTest {
+	public static void main(String[] args) {
+    System.out.println("5. 반복문을 활용하여 홀수 스텝의 구구단만 출력");
+			int i2;
+			for ( i2 = 2; i2 <= 9; i2++) {
+				System.out.print(i2 + "단\t");
+			}
+			System.out.println();
+			int j2;
+			int k2;
+			for (k2 = 1; k2 <= 9; k2 = k2 + 2) {
+				for (j2 = 2 ; j2 <= 9; j2++) {
+					System.out.print(j2 + "*" + k2 + "=" + j2*k2 + "\t");
+				}
+				System.out.println();
+			}
+  }
+}
