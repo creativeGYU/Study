@@ -1,0 +1,21 @@
+public static void main(String[] args) {
+		System.out.println("2. while 구문을 활용한 구구단");	
+			int o = 2;
+			while(o <= 9){
+				System.out.print(o + "단\t");
+				o++;
+			}
+			System.out.println();
+			int p = 2;
+			int q = 1;		
+			while(q <= 9) {
+				while(p <= 9) {
+					System.out.print(p + "*" + q + "=" + p*q + "\t");
+					p++;
+				}
+				System.out.println();
+				p = 2;
+				q++;
+			}
+		System.out.print("\n");
+}
