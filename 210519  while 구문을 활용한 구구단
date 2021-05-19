@@ -1,4 +1,5 @@
-public static void main(String[] args) {
+public class GuGuDanTest {
+	public static void main(String[] args) {
 		System.out.println("2. while 구문을 활용한 구구단");	
 			int o = 2;
 			while(o <= 9){
@@ -18,4 +19,5 @@ public static void main(String[] args) {
 				q++;
 			}
 		System.out.print("\n");
+	}
 }
