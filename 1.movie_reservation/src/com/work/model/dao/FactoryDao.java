@@ -41,7 +41,7 @@ public class FactoryDao {
 	private FactoryDao() {
 		try {
 			Class.forName(driver);
-			System.out.println("[성공] 드라이버 로딩 성공");
+//			System.out.println("[성공] 드라이버 로딩 성공");
 		} catch (ClassNotFoundException e) {
 			System.out.println("[오류] 드라이버 로딩 오류");
 			e.printStackTrace();
@@ -60,7 +60,7 @@ public class FactoryDao {
 		Connection conn = null;
 		try {
 			conn = DriverManager.getConnection(url, user, password);
-			System.out.println("[성공] FactoryDao DB 연결 성공");
+//			System.out.println("[성공] FactoryDao DB 연결 성공");
 		} catch (SQLException e) {
 			System.out.println("[오류] FactoryDao DB 연결 실패");
 			e.printStackTrace();

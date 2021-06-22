@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import com.work.model.dto.Member;
-import com.work.model.dto.Movie;
 import com.work.model.service.MemberService;
 import com.work.model.service.MovieService;
 import com.work.model.service.SeatDoraemong;
@@ -108,7 +107,7 @@ public class MemberMenu {
 		System.out.println();
 		String email = inputString();
 		
-		Member dto = new Member(Id, pw, name, birth, mobile, email);
+		new Member(Id, pw, name, birth, mobile, email);
 		service.addMember(Id, pw, name, birth, mobile, email);
 		System.out.println("회원가입이 완료되었습니다. 짝짝짝");
 		Utility.printLine("환영합니다 ^ㅡㅡㅡ^          ");
@@ -417,9 +416,7 @@ public class MemberMenu {
 		
 		System.out.print("비밀번호(Pw) : ");
 		String pw = inputString();
-		Member dto = service.deleteMyInfo(Id, pw);
-		System.out.println(dto);
-		Utility.printLine("그동안 이용해 주셔서 감사합니다 ^ㅡㅡㅡ^");
+		service.deleteMyInfo(Id, pw);
 		System.out.println("1. 뒤로 가기");
 		System.out.println("9. 프로그램 종료");
 		Utility.printLine("환영합니다 ^ㅡㅡㅡ^          ");
@@ -522,6 +519,7 @@ public class MemberMenu {
 	 */
 	public void Doraemong() {
 		int menu = 0;
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		SeatDoraemong sd = new SeatDoraemong();
 		
@@ -541,7 +539,7 @@ public class MemberMenu {
 			
 			switch(menu) {
 			case 1:
-				movie.getInfo(0);
+				movie.getInfo("도라에몽 : 스탠바이미 2");
 				break;
 			case 2:
 				sd.reservation();
@@ -682,6 +680,7 @@ public class MemberMenu {
 //		count = service.initMember();
 //		System.out.print("[회원 초기화 작업이 완료되었습니다. 현재 등록 회원수 (" + count + ")명]");
 //		// 프로그램 서비스 전 기존 회원정보 파일 가져와서 회원관리 저장구조 메모리에 저장하기
+		
 	}
 	
 	/** 
@@ -694,7 +693,7 @@ public class MemberMenu {
 		// saveMemberDataFile();
 			
 		Utility.printLine("프로그램 정상 종료");
-		System.exit(5);;
+		System.exit(0);
 	}
 
 	/**
